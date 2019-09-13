@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <nav>
         <a href="">
+          <span class="visually-hidden">Логотип Седоны</span>
           <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
         </a>
         <ul>
@@ -19,7 +21,7 @@
       </nav>
     </header>
     <main>
-      <h1>Город Седона</h1>
+      <h1 class="visually-hidden">Город Седона</h1>
       <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome">
       <h2>
         Cедона — небольшой городок в Аризоне,<br>заслуживающий большего!
@@ -102,7 +104,27 @@
         <p>
           ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
         </p>
-        <!-- Здесь будет форма -->
+        <div>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div>
+              <label for="check-in-date">Дата заезда</label>
+              <input type="text" name="check-in-date" id="check-in-date" value="24 АПРЕЛЯ 2017" required>
+            </div>
+            <div>
+              <label for="check-out-date">Дата выезда</label>
+              <input type="text" name="check-out-date" id="check-out-date" value="4 ИЮЛЯ 2017" required>
+            </div>
+            <div>
+              <label for="adults">Взрослые</label>
+              <input type="text" name="adults" id="adults" value="2" required>
+            </div>
+            <div>
+              <label for="children">Дети</label>
+              <input type="text" name="children" id="children" value="0" required>
+            </div>
+            <button type="submit">Найти</button>
+          </form>
+        </div>
         <img src="img/map.png" width="1200" height="593" alt="Карта">
       </section>
     </main>
@@ -111,13 +133,14 @@
         #VISITSEDONA
       </p>
       <ul>
-        <li><a href=""><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
-        <li><a href=""><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
-        <li><a href=""><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
+        <li><a href=""><span class="visually-hidden">Twitter</span><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
+        <li><a href=""><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
+        <li><a href=""><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
       </ul>
       <div>
         <p>website by</p>
         <a href="">
+          <span class="visually-hidden">HTML Academy</span>
           <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">
         </a>
       </div>
