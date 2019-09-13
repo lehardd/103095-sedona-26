@@ -102,25 +102,33 @@
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
         <p>
-          ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
+          <a href="hotels.html">
+            ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
+          </a>
         </p>
         <div>
           <form action="https://echo.htmlacademy.ru" method="post">
             <div>
               <label for="check-in-date">Дата заезда</label>
               <input type="text" name="check-in-date" id="check-in-date" value="24 АПРЕЛЯ 2017" required>
+              <button type="button"><span class="visually-hidden">выбор даты заезда</span><img src="img/calendar.svg" width="21" height="22" alt="календарь"></button>
             </div>
             <div>
               <label for="check-out-date">Дата выезда</label>
               <input type="text" name="check-out-date" id="check-out-date" value="4 ИЮЛЯ 2017" required>
+              <button type="button"><span class="visually-hidden">выбор даты выезда</span><img src="img/calendar.svg" width="21" height="22" alt="календарь"></button>
             </div>
             <div>
               <label for="adults">Взрослые</label>
+              <button type="button">-</button>
               <input type="text" name="adults" id="adults" value="2" required>
+              <button type="button">+</button>
             </div>
             <div>
               <label for="children">Дети</label>
+              <button type="button">-</button>
               <input type="text" name="children" id="children" value="0" required>
+              <button type="button">+</button>
             </div>
             <button type="submit">Найти</button>
           </form>
