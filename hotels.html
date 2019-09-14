@@ -21,14 +21,71 @@
       </nav>
     </header>
     <main>
-      <h1>
+      <h1 class="visually-hidden">
         Гостиницы
       </h1>
       <section>
         <h2 class="visually-hidden">
           Фильтр гостиниц
         </h2>
-       <!-- Здесь будет форма -->
+        <div>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div>
+              <p>
+                инфраструктура:
+              </p>
+              <input type="checkbox" name="pool" id="pool" checked>
+              <label for="pool">бассейн</label>
+              <input type="checkbox" name="parking" id="parking" >
+              <label for="parking">парковка</label>
+              <input type="checkbox" name="wifi" id="wifi" >
+              <label for="wifi">wi-fi</label>
+            </div>
+            <div>
+              <p>
+                тип жилья:
+              </p>
+              <input type="checkbox" name="hotel" id="hotel" checked>
+              <label for="hotel">гостиница</label>
+              <input type="checkbox" name="motel" id="motel" checked>
+              <label for="motel">мотель</label>
+              <input type="checkbox" name="apartaments" id="apartaments" checked>
+              <label for="apartaments">апартаменты</label>
+            </div>
+            <div>
+              <p>
+                стоимость в сутки (р):
+              </p>
+              <div>
+                <label for="min-price">от</label>
+                <output name="min-price">0</output>
+                <label for="max-price">до</label>
+                <output name="max-price">3000</output>
+              </div>
+              <div class="slider">
+                <div> <!-- полоска -->
+                  <span></span><!-- кружочки -->
+                  <span></span><!-- кружочки -->
+                </div>
+              </div>
+              <button type="submit">показать</button>
+            </div>
+          </form>
+          <div>
+            <label for="found">найдено:</label>
+            <output name="found">3</output>
+            <p>
+              сортировка:
+            </p>
+            <ul>
+              <li><a href="">по цене</a></li>
+              <li><a href="">по типу</a></li>
+              <li><a href="">по рейтингу</a></li>
+            </ul>
+            <button><span class="visually-hidden">по возрастанию</span></button>
+            <button><span class="visually-hidden">по убыванию</span></button>
+          </div>
+        </div>
       </section>
       <section>
         <h2 class="visually-hidden">
