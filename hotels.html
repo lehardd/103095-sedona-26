@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Гостиницы</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -16,7 +18,7 @@
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и видео</a></li>
           <li><a href="">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li><a href="hotels.html" class="active-page">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -87,7 +89,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="search-result">
         <h2 class="visually-hidden">
           Список гостиниц
         </h2>
@@ -98,12 +100,12 @@
             </div>
             <div>
               <h3>
-                <span>Amara Resort & Spa</span>
+                <a href="" class="hotel-name">Amara Resort & Spa</a>
               </h3>
               <p>Гостиница</p>
               <p>от 4000 Р.</p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+              <a href="" class="hotel-button details">Подробнее</a>
+              <a href="" class="hotel-button book">Забронировать</a>
             </div>
             <div>
               <div>
@@ -123,12 +125,12 @@
             </div>
             <div>
               <h3>
-                <span>Desert Quail Inn</span>
+                <a href="" class="hotel-name">Desert Quail Inn</a>
               </h3>
               <p>Мотель</p>
               <p>от 3000 Р.</p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+              <a href="" class="hotel-button details">Подробнее</a>
+              <a href="" class="hotel-button book">Забронировать</a>
             </div>
             <div>
               <div>
@@ -147,12 +149,12 @@
             </div>
             <div>
               <h3>
-                <span>Villas at Poco Diablo</span>
+                <a href="" class="hotel-name">Villas at Poco Diablo</a>
               </h3>
               <p>Апартаменты</p>
               <p>от 2000 Р.</p>
-              <a href="">Подробнее</a>
-              <a href="">Забронировать</a>
+              <a href="" class="hotel-button details">Подробнее</a>
+              <a href="" class="hotel-button book">Забронировать</a>
             </div>
             <div>
               <div>
@@ -168,16 +170,18 @@
       </section>
     </main>
     <footer>
-      <p>
+      <p class="visitsedona">
         #VISITSEDONA
       </p>
       <ul>
-        <li><a href=""><span class="visually-hidden">Twitter</span><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
-        <li><a href=""><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
-        <li><a href=""><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
+        <li><a href="" class="social-button twitter"><span class="visually-hidden">Twitter</span><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
+        <li><a href="" class="social-button facebook"><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
+        <li><a href="" class="social-button youtube"><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
       </ul>
       <div>
-        <p>website by</p>
+        <p class="copyright">
+          website by
+        </p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">HTML Academy</span>
           <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">
