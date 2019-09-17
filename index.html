@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -22,13 +24,17 @@
     </header>
     <main>
       <h1 class="visually-hidden">Город Седона</h1>
-      <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome">
-      <h2>
-        Cедона — небольшой городок в Аризоне,<br>заслуживающий большего!
-      </h2>
-      <p>
-        Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-      </p>
+      <div class="welcome">
+        <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome">
+      </div>
+      <div class="about">
+        <h2>
+          Cедона — небольшой городок в Аризоне,<br>заслуживающий большего!
+        </h2>
+        <p>
+          Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+        </p>
+      </div>
       <section>
         <h2 class="visually-hidden">
           Преимущества Седоны
@@ -96,7 +102,7 @@
           </p>
         </div>
       </section>
-      <section>
+      <section class="search">
         <h2>
           Заинтересовались?<br>
         </h2>
@@ -104,12 +110,10 @@
           Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в седоне
         </p>
-        <div>
-          <a href="#hotels-modal">
-            ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
-          </a>
-        </div>
-        <div id="hotels-modal">
+        <a href="#hotels-modal" class="search-button">
+          ПОИСК ГОСТИНИЦЫ В СЕДОНЕ
+        </a>
+        <div id="hotels-modal" class="hotels-modal">
           <form action="https://echo.htmlacademy.ru" method="post">
             <div>
               <label for="check-in-date">Дата заезда</label>
@@ -140,16 +144,18 @@
       </section>
     </main>
     <footer>
-      <p>
+      <p class="visitsedona">
         #VISITSEDONA
       </p>
       <ul>
-        <li><a href=""><span class="visually-hidden">Twitter</span><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
-        <li><a href=""><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
-        <li><a href=""><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
+        <li><a href="" class="social-button twitter"><span class="visually-hidden">Twitter</span><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
+        <li><a href="" class="social-button facebook"><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
+        <li><a href="" class="social-button youtube"><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
       </ul>
       <div>
-        <p>website by</p>
+        <p class="copyright">
+          website by
+        </p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <span class="visually-hidden">HTML Academy</span>
           <img src="img/logo-htmlacademy.svg" width="115" height="41" alt="HTML Academy">
