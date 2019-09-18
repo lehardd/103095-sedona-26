@@ -1,9 +1,6 @@
 body{
-  max-width: 1200px;
-  margin: 0;
-  padding: 0;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1200px;
+  margin: 0 auto;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   color: black;
@@ -43,7 +40,6 @@ nav a:active{
 /* INDEX.htnl */
 
 .welcome{
-  width:1200px;
   height: 508px;
   box-sizing: border-box;
   background-color: rgb(98, 148, 191);
@@ -51,31 +47,39 @@ nav a:active{
   background-repeat: no-repeat, no-repeat;
   background-size:100%, 100%;
   background-position: 0 451px, 0 -82px;
-  /*border-top: 1px solid transparent; */
   text-align: center;
   padding-top: 76px;
+  margin-bottom: 60px;
 }
 
-/*.welcome img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 76px;
-}*/
-
 .about h2{
-  margin-top:60px;
   text-align: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .about p{
-  margin-top:30px;
   text-align: center;
   font-size: 14px;
   line-height: 26px;
+}
+
+.advantages h3{
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.advantages p{
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.blue-block{ /* наверное временное название класса */
+  background-color: rgb(129, 179, 210);
+  color:white;
 }
 
 .search h2{
@@ -89,6 +93,7 @@ nav a:active{
   text-align: center;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom:45px;
 }
 
 .search-button{
@@ -97,7 +102,6 @@ nav a:active{
   width: 568px;
   height: 86px;
   margin: auto;
-  margin-top:45px;
   padding-top: 31px;
   font-size: 21px;
   font-weight: bold;
