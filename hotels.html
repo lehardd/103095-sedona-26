@@ -26,16 +26,16 @@
       <h1 class="visually-hidden">
         Гостиницы
       </h1>
-      <section>
+      <section class="search-filter">
         <h2 class="visually-hidden">
           Фильтр гостиниц
         </h2>
         <div>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <div>
-              <p>
+            <div> <!--  -->
+              <h3>
                 инфраструктура:
-              </p>
+              </h3>
               <input type="checkbox" name="pool" id="pool" checked>
               <label for="pool">бассейн</label>
               <input type="checkbox" name="parking" id="parking" >
@@ -44,9 +44,9 @@
               <label for="wifi">wi-fi</label>
             </div>
             <div>
-              <p>
+              <h3>
                 тип жилья:
-              </p>
+              </h3>
               <input type="checkbox" name="hotel" id="hotel" checked>
               <label for="hotel">гостиница</label>
               <input type="checkbox" name="motel" id="motel" checked>
@@ -55,14 +55,14 @@
               <label for="apartaments">апартаменты</label>
             </div>
             <div>
-              <p>
+              <h3>
                 стоимость в сутки (р):
-              </p>
+              </h3>
               <div>
-                <label for="min-price">от</label>
-                <output name="min-price" id="min-price">0</output>
-                <label for="max-price">до</label>
-                <output name="max-price" id="max-price">3000</output>
+                <label for="min-price" class="range">от</label>
+                <output name="min-price" id="min-price" class="range">0</output>
+                <label for="max-price" class="range">до</label>
+                <output name="max-price" id="max-price" class="range">3000</output>
               </div>
               <div class="range">
                 <div> <!-- полоска -->
@@ -73,14 +73,14 @@
               <button type="submit">показать</button>
             </div>
           </form>
-          <div>
+          <div class="found">
             <label for="found">найдено:</label>
             <output name="found" id="found">3</output>
             <p>
               сортировка:
             </p>
             <ul>
-              <li><a href="">по цене</a></li>
+              <li><a href="" class="active-sort">по цене</a></li>
               <li><a href="">по типу</a></li>
               <li><a href="">по рейтингу</a></li>
             </ul>
