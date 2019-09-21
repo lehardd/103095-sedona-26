@@ -1,3 +1,11 @@
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body{
   width: 1200px;
   margin: 0 auto;
@@ -13,8 +21,42 @@ a {
 
 /* HEADER */
 
+.logo{
+  position: relative;
+  left:531px;
+  top:-56px; /* высота блока nav, пройдет ли совместно с критерием Д19 по переполнению контентом? если в ссылки меню добавить текста, логотип поедет вниз вместе с текстом.*/
+}
+
+nav ul{
+  display: flex;
+  padding: 0;
+  margin: 0px;
+}
+
 nav li{
   list-style: none;
+  width: 140px;
+  min-height: 56px;
+  padding-top: 15px;
+}
+
+nav li:nth-child(1){
+  margin-left: 71px;
+}
+
+nav li:nth-child(2){
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+nav li:nth-child(3){
+  margin-left: auto;
+  margin-right: 100px;
+  text-align: right;
+}
+nav li:nth-child(4){
+  margin-right: 71px;
+  text-align: right;
 }
 
 nav a{
@@ -37,11 +79,14 @@ nav a:active{
   color: rgb(118, 99, 87);
 }
 
+main{
+  margin-top:-71px
+}
+
 /* INDEX.htnl */
 
 .welcome{
   height: 508px;
-  box-sizing: border-box;
   background-color: rgb(98, 148, 191);
   background-image:  url("../img/intro-mask.svg"), url("../img/welcome-background.jpg");
   background-repeat: no-repeat, no-repeat;
@@ -64,6 +109,14 @@ nav a:active{
   text-align: center;
   font-size: 14px;
   line-height: 26px;
+  margin-bottom: 50px;
+}
+
+.advantages{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+/*   background-color: rgb(129, 179, 210); */
 }
 
 .advantages h3{
@@ -81,10 +134,9 @@ nav a:active{
   margin-bottom: 20px;
 }
 
-.blue-block{ /* возможно временное название класса */
+.blue-block{ /* возможно временное название класса. такие названия норм, или нужно что-то более отражающее суть блока? */
   width: 400px;
-  height: 256px;
-  box-sizing: border-box;
+  min-height: 256px;
   background-color: rgb(129, 179, 210);
   color:white;
   padding-top:25px;
@@ -92,17 +144,17 @@ nav a:active{
 
 .picture-block{ /* возможно временное название класса */
   width: 800px;
-  height: 256px;
+  height: 256px; /* если здесь поставить min-height:256px;, то картинку в блоке перекосит, под ней появится белая полоса. так и не понял почему. */
 }
 
 .picture-block img{ /* возможно временное название класса */
   object-fit: cover;
+  object-position: 0 -78px;
 }
 
 .advice{
   width: 400px;
-  height: 330px;
-  box-sizing: border-box;
+  min-height: 330px;
   padding-top: 140px;
 }
 
@@ -126,8 +178,7 @@ nav a:active{
 
 .grey-block{ /* возможно временное название класса */
   width: 400px;
-  height: 256px;
-  box-sizing: border-box;
+  min-height: 256px;
   background-color: rgb(238, 238, 238);
   padding-top:25px;
 }
@@ -148,7 +199,6 @@ nav a:active{
 
 .search-button{
   display: block;
-  box-sizing: border-box;
   width: 568px;
   height: 86px;
   margin: auto;
@@ -185,6 +235,7 @@ nav a:active{
   line-height: 21px;
   font-weight: bold;
   color:white;
+  margin: 0;
 }
 
 .search-filter label{
@@ -240,7 +291,6 @@ nav a:active{
 
 .hotel-name{
   font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
   color:black;
 }
@@ -254,18 +304,67 @@ nav a:active{
   color: rgb(202, 202, 202);
 }
 
+.search-result{
+  margin-bottom: 3px;
+}
+
 .search-result p{
   font-size: 14px;
   line-height: 21px;
 }
+.search-result ul{
+  padding: 0px;
+  margin: 0px;
+}
 
 .search-result li{
   list-style: none;
+  display: flex;
+  border-bottom: 1px solid rgb(229, 229, 229);
+/*   padding-top:25px; */
+  padding-bottom: 30px;
+  min-height: 151px;
+}
+
+.hotel-result-picture{
+  margin-top: 30px;
+  margin-left: 72px;
+  height: 90px;
+}
+
+.hotel-result-name{
+  width: 258px;
+  min-height: 90px;
+  margin-top: 25px;
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotel-result-name h3{
+  width: 258px;
+  margin: 0;
+}
+
+.hotel-result-name p{
+  width: 110px;
+  min-height: 40px;
+  margin: 0;
+  padding-top: 7px;
+}
+
+.hotel-result-name p:nth-child(3){
+  width: 142px;
+}
+
+.hotel-result-raiting{
+  margin-left: auto;
+  margin-right: 73px;
 }
 
 .hotel-button{
   display: block;
-  box-sizing: border-box;
   height: 27px;
   font-size: 14px;
   line-height: 21px;
@@ -273,6 +372,7 @@ nav a:active{
   color: rgb(255, 255, 255);
   text-align: center;
   padding-top: 3px;
+  margin-top: 3px;
 }
 
 .details{
@@ -305,24 +405,70 @@ nav a:active{
   color: rgb(146, 138, 133);
 }
 
+.stars{
+  width: 110px;
+  height: 17px;
+  text-align: right;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+
+.raiting{
+  width: 110px;
+  background-color: rgb(242, 242, 242);
+  padding: 3px 4px 3px 15px;
+  margin: 0;
+}
+
 /* FOOTER */
+
+.footer{
+  display: flex;
+  min-height: 120px;
+}
 
 .visitsedona{
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  margin-left: 132px;
+  margin-top: 43px;
 }
 
-footer li{
+.footer ul{
+  padding:0;
+  width: 150px;
+  display: flex;
+  justify-content:space-between;
+  margin-top: 33px;
+  margin-left: 256px;
+}
+
+.copyright{
+  display: flex;
+  margin-top:28px;
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.copyright p{
+  font-size: 14px;
+  line-height: 26px;
+  margin-right: 8px;
+}
+
+.copyright img{
+  margin-top: 8px;
+}
+
+.footer li{
   list-style: none;
 }
 
 .social-button{
   display: block;
-  box-sizing: border-box;
   width: 46px;
   height: 48px;
-  margin: 10px; /* временно */
   text-align: center;
   background-color: rgb(129, 179, 210);
 }
@@ -347,11 +493,6 @@ footer li{
 
 .youtube{
   padding-top: 16px;
-}
-
-.copyright{
-  font-size: 14px;
-  line-height: 26px;
 }
 
 /* VISUALLY HIDDEN */
