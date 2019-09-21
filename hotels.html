@@ -9,10 +9,6 @@
   </head>
   <body>
     <header>
-      <a href="index.html">
-        <h2 class="visually-hidden">На главную страницу</h2>
-        <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны">
-      </a>
       <nav>
         <ul>
           <li><a href="">Информация</a></li>
@@ -21,6 +17,10 @@
           <li><a href="hotels.html" class="active-page">Гостиницы</a></li>
         </ul>
       </nav>
+      <a href="index.html">
+        <h2 class="visually-hidden">На главную страницу</h2>
+        <img src="img/logo-sedona.svg" width="138" height="71" alt="Логотип Седоны" class="logo">
+      </a>
     </header>
     <main>
       <h1 class="visually-hidden">
@@ -95,10 +95,10 @@
         </h2>
         <ul>
           <li>
-            <div>
+            <div class=hotel-result-picture>
               <img src="img/hotel-amara-resort-spa.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
             </div>
-            <div>
+            <div class=hotel-result-name>
               <h3>
                 <a href="" class="hotel-name">Amara Resort & Spa</a>
               </h3>
@@ -107,23 +107,21 @@
               <a href="" class="hotel-button details">Подробнее</a>
               <a href="" class="hotel-button book">Забронировать</a>
             </div>
-            <div>
-              <div>
+            <div class=hotel-result-raiting>
+              <div class="stars">
                 <span>☆</span>
                 <span>☆</span>
                 <span>☆</span>
                 <span>☆</span>
               </div>
-              <div>
-                <span>Рейтинг:8,5</span>
-              </div>
+              <p class="raiting">Рейтинг: 8,5</p>
             </div>
           </li>
             <li>
-            <div>
+            <div class=hotel-result-picture>
               <img src="img/hotel-desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
             </div>
-            <div>
+            <div class=hotel-result-name>
               <h3>
                 <a href="" class="hotel-name">Desert Quail Inn</a>
               </h3>
@@ -132,22 +130,20 @@
               <a href="" class="hotel-button details">Подробнее</a>
               <a href="" class="hotel-button book">Забронировать</a>
             </div>
-            <div>
-              <div>
+            <div class=hotel-result-raiting>
+              <div class="stars">
                 <span>☆</span>
                 <span>☆</span>
                 <span>☆</span>
               </div>
-              <div>
-                <span>Рейтинг:8,9</span>
-              </div>
+              <p class="raiting">Рейтинг: 8,9</p>
             </div>
           </li>
             <li>
-            <div>
+            <div class=hotel-result-picture>
               <img src="img/hotel-villas-at-poco-diablo.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
             </div>
-            <div>
+            <div class=hotel-result-name>
               <h3>
                 <a href="" class="hotel-name">Villas at Poco Diablo</a>
               </h3>
@@ -156,20 +152,18 @@
               <a href="" class="hotel-button details">Подробнее</a>
               <a href="" class="hotel-button book">Забронировать</a>
             </div>
-            <div>
-              <div>
+            <div class=hotel-result-raiting>
+              <div class="stars">
                 <span>☆</span>
                 <span>☆</span>
               </div>
-              <div>
-                <span>Рейтинг:9,2</span>
-              </div>
+              <p class="raiting">Рейтинг: 9,2</p>
             </div>
           </li>
         </ul>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <p class="visitsedona">
         #VISITSEDONA
       </p>
@@ -178,8 +172,8 @@
         <li><a href="" class="social-button facebook"><span class="visually-hidden">Facebook</span><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
         <li><a href="" class="social-button youtube"><span class="visually-hidden">Youtube</span><img src="img/youtube.svg" width="20" height="16" alt="Youtube"></a></li>
       </ul>
-      <div>
-        <p class="copyright">
+      <div class="copyright">
+        <p>
           website by
         </p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
