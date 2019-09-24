@@ -32,29 +32,41 @@
         </h2>
         <div>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <div> <!--  -->
+            <div class="infrastructure">
               <h3>
                 инфраструктура:
               </h3>
-              <input type="checkbox" name="pool" id="pool" checked>
-              <label for="pool">бассейн</label>
-              <input type="checkbox" name="parking" id="parking" >
-              <label for="parking">парковка</label>
-              <input type="checkbox" name="wifi" id="wifi" >
-              <label for="wifi">wi-fi</label>
+              <div class=checkbox>
+                <input type="checkbox" name="pool" id="pool" checked>
+                <label for="pool">бассейн</label>
+              </div>
+              <div class=checkbox>
+                <input type="checkbox" name="parking" id="parking" >
+                <label for="parking">парковка</label>
+              </div>
+              <div class=checkbox>
+                <input type="checkbox" name="wifi" id="wifi" >
+                <label for="wifi">wi-fi</label>
+              </div>
             </div>
-            <div>
+            <div class="type-of-housing">
               <h3>
                 тип жилья:
               </h3>
-              <input type="checkbox" name="hotel" id="hotel" checked>
-              <label for="hotel">гостиница</label>
-              <input type="checkbox" name="motel" id="motel" checked>
-              <label for="motel">мотель</label>
-              <input type="checkbox" name="apartaments" id="apartaments" checked>
-              <label for="apartaments">апартаменты</label>
+              <div class=checkbox>
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">гостиница</label>
+              </div>
+              <div class=checkbox>
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">мотель</label>
+              </div>
+              <div class=checkbox>
+                <input type="checkbox" name="apartaments" id="apartaments" checked>
+                <label for="apartaments">апартаменты</label>
+              </div>
             </div>
-            <div>
+            <div class="cost">
               <h3>
                 стоимость в сутки (р):
               </h3>
@@ -74,8 +86,10 @@
             </div>
           </form>
           <div class="found">
-            <label for="found">найдено:</label>
-            <output name="found" id="found">3</output>
+            <div>
+              <label for="found">найдено:</label>
+              <output name="found" id="found">3</output>
+            </div>
             <p>
               сортировка:
             </p>
