@@ -28,7 +28,7 @@ a {
 }
 
 header nav{
-  margin-top:-73px
+  margin-top:-74px;
 }
 
 nav ul{
@@ -236,6 +236,9 @@ nav a:active{
 
 .search-filter form{
   background-image:  url("../img/filter-background.jpg");
+  display: flex;
+  min-height: 217px;
+  padding: 25px 70px;
 }
 
 .search-filter h3{
@@ -243,11 +246,10 @@ nav a:active{
   line-height: 21px;
   font-weight: bold;
   color:white;
-  margin: 0;
 }
 
 .search-filter label{
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
   color:white;
 }
@@ -258,6 +260,33 @@ nav a:active{
   color:white;
 }
 
+.infrastructure{
+  width: 200px;
+}
+
+.type-of-housing{
+  width: 200px;
+  margin-left: 70px;
+}
+
+.cost{
+  width: 330px;
+  margin-left: auto;
+}
+
+.checkbox{
+  margin-top: 20px;
+}
+
+/* сортировка результатов */
+
+.found{
+  display: flex;
+  min-height: 87px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  padding: 30px 72px;
+}
+
 .found label,
 .found output{
   font-size: 21px;
@@ -266,13 +295,28 @@ nav a:active{
   color:black;
 }
 
+.found ul{
+  padding: 0;
+  margin: 3px 0 0 7px;
+  display: flex;
+}
+
 .found li{
   list-style: none;
+  margin-left: 33px;
 }
 
 .found p{
   font-size: 12px;
   line-height: 18px;
+  margin: 5px 0 0 48px;
+}
+
+.found button{
+  margin-left: auto;
+}
+.found button:last-child{
+  margin-left: 5px;
 }
 
 .found a{
@@ -311,6 +355,8 @@ nav a:active{
 .hotel-name:active{
   color: rgb(202, 202, 202);
 }
+
+/* результаты поиска */
 
 .search-result{
   margin-bottom: 3px;
@@ -448,6 +494,7 @@ nav a:active{
   width: 150px;
   display: flex;
   justify-content:space-between;
+  flex-wrap: wrap;
   margin-top: 33px;
   margin-left: 256px;
 }
@@ -471,6 +518,7 @@ nav a:active{
 
 .footer li{
   list-style: none;
+  margin-bottom: 5px;
 }
 
 .social-button{
