@@ -238,45 +238,200 @@ nav a:active{
   background-image:  url("../img/filter-background.jpg");
   display: flex;
   min-height: 217px;
-  padding: 25px 70px;
+  padding: 28px 71px 5px;
 }
 
 .search-filter h3{
   font-size: 16px;
-  line-height: 21px;
   font-weight: bold;
   color:white;
+  margin: 0;
+  margin-bottom: 27px;
 }
 
-.search-filter label{
+ .search-filter label{
   font-size: 14px;
-  line-height: 21px;
   color:white;
 }
 
-.search-filter .range{
+/* .search-filter .range{
   font-size: 14px;
   line-height: 21px;
   color:white;
-}
+} */
 
 .infrastructure{
-  width: 200px;
+  min-width: 200px;
 }
 
 .type-of-housing{
-  width: 200px;
-  margin-left: 70px;
-}
-
-.cost{
-  width: 330px;
-  margin-left: auto;
+  min-width: 200px;
+  margin-left: 56px;
 }
 
 .checkbox{
-  margin-top: 20px;
+  margin-bottom: 28px;
+  margin-left: 23px;
 }
+
+.checkbox input{
+  visibility: hidden;
+}
+
+.checkbox label{
+  position: relative;
+}
+
+.checkbox label::before{
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  left:-40px;
+  top:-1px;
+}
+
+.checkbox-input:checked + label::before{
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 23px;
+  background: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  left:-40px;
+  top:-1px;
+}
+
+
+
+/* range-filter*/
+
+
+
+.filter-range{
+  width: 318px;
+  margin-left: auto;
+  margin-right: 1px;
+  color: #ffffff;
+  box-sizing: content-box;
+}
+
+.filter-range h3 {
+  margin-bottom: 13px;
+}
+
+.price-controls {
+  position: relative;
+  height: 32px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 30px;
+  vertical-align: center;
+  cursor: pointer;
+}
+
+.price-controls .min-price{
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 56px;
+}
+
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.button-transparent {
+  display: block;
+  margin: 0 85px;
+  padding: 6px 34px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button-transparent:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+
+
+
 
 /* сортировка результатов */
 
@@ -284,13 +439,12 @@ nav a:active{
   display: flex;
   min-height: 87px;
   border-bottom: 1px solid rgb(229, 229, 229);
-  padding: 30px 72px;
+  padding: 31px 72px;
 }
 
 .found label,
 .found output{
   font-size: 21px;
-  line-height: 26px;
   font-weight: bold;
   color:black;
 }
@@ -314,9 +468,27 @@ nav a:active{
 
 .found button{
   margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
+
 .found button:last-child{
-  margin-left: 5px;
+  margin-left: 12px;
+  margin-right: 1px;
+}
+
+.active-sort-button polygon{
+  fill: rgb(136, 182, 209);
+}
+
+.found polygon:hover,
+.found polygon:focus{
+  fill: rgb(35, 31, 32);
+}
+
+.found polygon:active{
+  fill: rgb(129, 179, 210);
 }
 
 .found a{
@@ -375,7 +547,6 @@ nav a:active{
   list-style: none;
   display: flex;
   border-bottom: 1px solid rgb(229, 229, 229);
-/*   padding-top:25px; */
   padding-bottom: 30px;
   min-height: 151px;
 }
@@ -405,7 +576,7 @@ nav a:active{
   width: 110px;
   min-height: 40px;
   margin: 0;
-  padding-top: 7px;
+  padding-top: 8px;
 }
 
 .hotel-result-name p:nth-child(3){
@@ -414,7 +585,7 @@ nav a:active{
 
 .hotel-result-raiting{
   margin-left: auto;
-  margin-right: 73px;
+  margin-right: 74px;
 }
 
 .hotel-button{
@@ -463,14 +634,27 @@ nav a:active{
   width: 110px;
   height: 17px;
   text-align: right;
-  margin-top: 30px;
-  margin-bottom: 45px;
+  margin-top: 28px;
+  margin-bottom: 47px;
+  position: relative;
+  color:white; /*  xD */
+}
+
+.stars span::before{
+  content: "";
+  background-image:  url("../img/star.svg");
+  width: 18px;
+  height: 17px;
+  position: absolute;
+}
+.stars span{
+  margin-left: 7px;
 }
 
 .raiting{
   width: 110px;
   background-color: rgb(242, 242, 242);
-  padding: 3px 4px 3px 15px;
+  padding: 3px 2px 3px 16px;
   margin: 0;
 }
 
@@ -503,16 +687,17 @@ nav a:active{
   display: flex;
   margin-top:28px;
   margin-left: auto;
-  margin-right: 100px;
+  margin-right: 101px;
 }
 
 .copyright p{
   font-size: 14px;
   line-height: 26px;
   margin-right: 8px;
+  margin-top: 15px;
 }
 
-.copyright img{
+.copyright svg{
   margin-top: 8px;
 }
 
@@ -536,8 +721,12 @@ nav a:active{
 
 .social-button:active{
   background-color: rgb(84, 150, 189);
-  /* color: rgb(136, 182, 209); тут будет замена цвета svg на этот, по клику.*/
 }
+
+.social-button:active path{
+ fill: rgb(136, 182, 209);
+}
+
 
 .twitter{
   padding-top: 17px;
@@ -549,6 +738,23 @@ nav a:active{
 
 .youtube{
   padding-top: 16px;
+}
+
+.academy-logo:hover path,
+.academy-logo:focus path{
+  fill: rgb(127, 179, 210);
+}
+
+.academy-logo:active path{
+ fill: rgb(189, 187, 188);
+}
+
+.main-page{
+  position: absolute;
+  width: 1200px;
+  min-height: 120px;
+/*   bottom: -120px; как его поднять на 120 пикселей вверх так и не понял*/
+  background-color: rgba(255, 255, 255, 0.9)
 }
 
 /* VISUALLY HIDDEN */
