@@ -254,12 +254,6 @@ nav a:active{
   color:white;
 }
 
-/* .search-filter .range{
-  font-size: 14px;
-  line-height: 21px;
-  color:white;
-} */
-
 .infrastructure{
   min-width: 200px;
 }
@@ -363,6 +357,7 @@ nav a:active{
 
 .price-controls input {
   width: 50px;
+  padding-bottom: 10px; /* для ie11 */
   margin: 0;
   color: inherit;
   font: inherit;
@@ -585,7 +580,7 @@ nav a:active{
 
 .hotel-result-raiting{
   margin-left: auto;
-  margin-right: 74px;
+  margin-right: 72px;
 }
 
 .hotel-button{
@@ -634,28 +629,28 @@ nav a:active{
   width: 110px;
   height: 17px;
   text-align: right;
-  margin-top: 28px;
-  margin-bottom: 47px;
-  position: relative;
-  color:white; /*  xD */
+  margin-top: 29px;
+  margin-bottom: 46px;
+  font-size: 0;
 }
 
-.stars span::before{
-  content: "";
+.stars span{
+  display: inline-block;
   background-image:  url("../img/star.svg");
+  font-size: 14px;
+  color: transparent;
   width: 18px;
   height: 17px;
-  position: absolute;
+  margin-left: 5px;
 }
-.stars span{
-  margin-left: 7px;
-}
+
 
 .raiting{
   width: 110px;
   background-color: rgb(242, 242, 242);
   padding: 3px 2px 3px 16px;
   margin: 0;
+  margin-right: 2px;
 }
 
 /* FOOTER */
@@ -750,11 +745,22 @@ nav a:active{
 }
 
 .main-page{
+   position: relative;
+/*   position: absolute;
+  width: 1200px;
+  min-height: 120px; */
+/*   bottom: -120px; как его поднять на 120 пикселей вверх так и не понял*/
+/*   background-color: rgba(255, 255, 255, 0.9); */
+/*   background-color:red; */
+}
+
+.main-page footer{
   position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
   width: 1200px;
   min-height: 120px;
-/*   bottom: -120px; как его поднять на 120 пикселей вверх так и не понял*/
-  background-color: rgba(255, 255, 255, 0.9)
+  bottom: 0px;
+
 }
 
 /* VISUALLY HIDDEN */
