@@ -659,6 +659,12 @@ nav a:active{
 .footer{
   display: flex;
   min-height: 120px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 1200px;
+  bottom: 0px;
+  /*   margin-top: -120px;
+  z-index: 1000; */
 }
 
 .visitsedona{
@@ -744,17 +750,6 @@ nav a:active{
 .academy-logo:active path{
  fill: rgb(189, 187, 188);
 }
-
-.footer{
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 1200px;
-  min-height: 120px;
-  bottom: 0px;
-/*   margin-top: -120px;
-  z-index: 1000; */
-}
-
 
 /* VISUALLY HIDDEN */
 
