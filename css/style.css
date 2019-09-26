@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: Gainsboro; /* https://up.htmlacademy.ru/htmlcss/26/project/sedona#sedona-3-6 */
 }
 
 body{
@@ -14,6 +15,7 @@ body{
   color: black;
   background-color: white;
   position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.75);
 }
 
 a {
@@ -24,25 +26,26 @@ a {
 
 .logo{
   position: relative;
+  display: block;
   left:50%;
   margin-left: -69px;
 }
 
 header nav{
-  margin-top:-74px;
+  margin-top: -71px;
 }
 
 nav ul{
   display: flex;
   padding: 0;
-  margin: 0px;
+  margin: 0;
 }
 
 nav li{
   list-style: none;
   width: 140px;
-  min-height: 56px;
-  padding-top: 14px;
+  min-height: 57px;
+  padding-top: 18px;
 }
 
 nav li:nth-child(1){
@@ -50,25 +53,25 @@ nav li:nth-child(1){
 }
 
 nav li:nth-child(2){
-  margin-left: 100px;
+  margin-left: 101px;
   margin-right: auto;
 }
 
 nav li:nth-child(3){
-  margin-left: auto;
-  margin-right: 100px;
+  margin-right: 101px;
   text-align: right;
 }
+
 nav li:nth-child(4){
-  margin-right: 72px;
+  margin-right: 71px;
   text-align: right;
 }
 
 nav a{
   font-size: 14px;
-  line-height: 26px;
   color: rgb(0, 0, 0);
   font-weight: bold;
+  letter-spacing: 0.008em;
 }
 
 nav a:hover,
@@ -84,6 +87,9 @@ nav a:active{
   color: rgb(118, 99, 87);
 }
 
+.link-map{
+  letter-spacing: 0.04em;
+}
 /* INDEX.htnl */
 
 .welcome{
@@ -103,16 +109,18 @@ nav a:active{
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   padding-left: 350px;
   padding-right: 350px;
+  letter-spacing: 0.008em; /*   why so serious */
 }
 
 .about p{
   text-align: center;
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
+  letter-spacing: 0.008em; /* ya really  */
 }
 
 .advantages{
@@ -126,18 +134,20 @@ nav a:active{
   line-height: 21px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding-left: 95px;
   padding-right: 95px;
+  letter-spacing: 0.008em;
 }
 
 .advantages p{
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding-left: 20px;
-  padding-right: 20px
+  padding-right: 20px;
+  letter-spacing: 0.008em;
 }
 
 .advantage-blue{
@@ -152,12 +162,18 @@ nav a:active{
   width: 800px;
   min-height: 256px;
   background-color: rgb(129, 179, 210);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.advantage-picture img{
-  display: block;
-  object-fit: cover;
-  object-position: 0 -78px;
+.town{
+  background-image:  url("../img/town.jpg");
+  background-position: 0 -78px;
+}
+
+.bridge{
+  background-image:  url("../img/bridge.jpg");
+  background-position: 0 -76px;
 }
 
 .advice{
@@ -176,20 +192,20 @@ nav a:active{
 .food{
   background-image: url("../img/icon-3.svg");
   background-repeat: no-repeat;
-  background-position: 50% 60px;
+  background-position: 50% 61px;
 }
 
 .souvenir{
   background-image: url("../img/icon-2.svg");
   background-repeat: no-repeat;
-  background-position: 50% 58px;
+  background-position: 50% 56px;
 }
 
 .advantage-grey{
   width: 400px;
   min-height: 256px;
   background-color: rgb(238, 238, 238);
-  padding: 25px;
+  padding: 26px;
 }
 
 .search h2{
@@ -197,13 +213,14 @@ nav a:active{
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
+  margin-bottom: 24px;
 }
 
 .search p{
   text-align: center;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom:45px;
+  margin-bottom:47px;
 }
 
 .search-button{
@@ -231,6 +248,12 @@ nav a:active{
 
 .hotels-modal{
   display:none;
+}
+
+.map{
+  height: 593px;
+  background-color: rgb(203,221,169);
+  background-image:  url("../img/map.png");
 }
 
 /* HOTELS */
@@ -315,6 +338,7 @@ nav a:active{
 
 .filter-range h3 {
   margin-bottom: 13px;
+  letter-spacing: 0.008em;
 }
 
 .price-controls {
@@ -526,10 +550,6 @@ nav a:active{
 
 /* результаты поиска */
 
-.search-result{
-  margin-bottom: 3px;
-}
-
 .search-result p{
   font-size: 14px;
   line-height: 21px;
@@ -566,6 +586,7 @@ nav a:active{
 .hotel-result-name h3{
   width: 258px;
   margin: 0;
+  letter-spacing: 0.015em;
 }
 
 .hotel-result-name p{
@@ -659,9 +680,12 @@ nav a:active{
 .footer{
   display: flex;
   min-height: 120px;
-  position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
   width: 1200px;
+}
+
+.main-page{
+  position: absolute;
   bottom: 0px;
   /*   margin-top: -120px;
   z-index: 1000; */
@@ -672,7 +696,7 @@ nav a:active{
   line-height: 26px;
   font-weight: bold;
   margin-left: 132px;
-  margin-top: 43px;
+  margin-top: 46px;
 }
 
 .footer ul{
@@ -681,13 +705,13 @@ nav a:active{
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
-  margin-top: 33px;
+  margin-top: 36px;
   margin-left: 256px;
 }
 
 .copyright{
   display: flex;
-  margin-top:28px;
+  margin-top:31px;
   margin-left: auto;
   margin-right: 101px;
 }
