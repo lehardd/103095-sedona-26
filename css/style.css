@@ -306,11 +306,28 @@ nav a:active{
   text-align: center;
 }
 
+.search-form .serach-button-main{
+  display: block;
+  width: 458px;
+  min-height: 58px;
+  background-color: rgb(129, 179, 210);
+  text-transform: uppercase;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 25px;
+  padding-bottom: 4px;
+}
+
 .map{
   height: 593px;
   background-color: rgb(203,221,169);
   background-image:  url("../img/map.png");
+  z-index: -1;
 }
+/* .map iframe{
+  z-index: -1;
+} */
 
 /* HOTELS */
 
@@ -741,10 +758,10 @@ nav a:active{
 }
 
 .main-page{
-  position: absolute;
-  bottom: 0px;
-  /*   margin-top: -120px;
-  z-index: 1000; */
+/*    position: absolute;
+     bottom: 0px; */
+   margin-top: -120px;
+  z-index: 1;
 }
 
 .visitsedona{
