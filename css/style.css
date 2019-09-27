@@ -77,6 +77,7 @@ nav a{
 nav a:hover,
 nav a:focus{
   color: rgb(129, 179, 210);
+    outline: 0;
 }
 
 nav a:active{
@@ -270,8 +271,8 @@ nav a:active{
   font-size: 14px;
   font-weight: bold;
 /*     letter-spacing: 0.001em; */
-
 }
+
 .search-form button{
   display: block;
   width: 38px;
@@ -292,6 +293,17 @@ nav a:active{
   font-weight: bold;
   padding: 3px 12px;;
 }
+
+.search-form input:hover{
+  background-color: rgb(235,235,235);
+}
+
+.search-form input:focus{
+  background-color: rgb(255,255,255);
+  border: 2px solid rgb(229,229,229);
+  outline: 0;
+}
+
 .search-form .check-out-date{
   margin-bottom: 30px;
 }
@@ -301,7 +313,7 @@ nav a:active{
   padding-left: 48px;
 }
 
-.search-form .small-input{ /* может его убрать */
+.search-form .small-input{
   width: 38px;
   text-align: center;
 }
@@ -319,15 +331,39 @@ nav a:active{
   padding-bottom: 4px;
 }
 
+.search-form .serach-button-main:hover,
+.search-form .serach-button-main:focus{
+  background-color: rgb(102, 158, 192);
+}
+
+.search-form .serach-button-main:active{
+  background-color: rgb(84, 150, 189);
+  color: rgb(136, 182, 209);
+}
+
+.search-form button:hover line,
+.search-form button:focus line{
+  stroke:black;
+}
+
+.search-form button:hover path,
+.search-form button:focus path{
+  fill:black;
+}
+
+.search-form button:active line{
+  stroke:rgb(129, 179, 210);
+}
+
+.search-form button:active path{
+  fill:rgb(129, 179, 210);
+}
+
 .map{
   height: 593px;
   background-color: rgb(203,221,169);
   background-image:  url("../img/map.png");
-  z-index: -1;
 }
-/* .map iframe{
-  z-index: -1;
-} */
 
 /* HOTELS */
 
@@ -395,11 +431,7 @@ nav a:active{
   top:-1px;
 }
 
-
-
 /* range-filter*/
-
-
 
 .filter-range{
   width: 318px;
@@ -521,10 +553,6 @@ nav a:active{
   color: #000000;
   background: #ffffff;
 }
-
-
-
-
 
 /* сортировка результатов */
 
@@ -760,7 +788,7 @@ nav a:active{
 .main-page{
 /*    position: absolute;
      bottom: 0px; */
-   margin-top: -120px;
+  margin-top: -120px;
   z-index: 1;
 }
 
