@@ -113,7 +113,7 @@ nav a:active{
   margin-bottom: 27px;
   padding-left: 350px;
   padding-right: 350px;
-  letter-spacing: 0.008em; /*   why so serious */
+  letter-spacing: 0.008em;
 }
 
 .about p{
@@ -121,7 +121,7 @@ nav a:active{
   font-size: 14px;
   line-height: 26px;
   margin-bottom: 51px;
-  letter-spacing: 0.008em; /* ya really  */
+  letter-spacing: 0.008em;
 }
 
 .advantages{
@@ -401,8 +401,13 @@ nav a:active{
   margin-left: 23px;
 }
 
-.checkbox input{
-  visibility: hidden;
+ .checkbox input{
+    opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: rgb(60, 150, 250) auto 5px;
+
 }
 
 .checkbox label{
@@ -549,7 +554,8 @@ nav a:active{
   cursor: pointer;
 }
 
-.button-transparent:hover {
+.button-transparent:hover,
+.button-transparent:focus{
   color: #000000;
   background: #ffffff;
 }
@@ -874,6 +880,10 @@ nav a:active{
 
 .academy-logo:active path{
  fill: rgb(189, 187, 188);
+}
+
+.text-fix{
+  letter-spacing: 0.02em;
 }
 
 /* VISUALLY HIDDEN */
