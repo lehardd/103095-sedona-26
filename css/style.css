@@ -4,22 +4,26 @@
 
 html {
   box-sizing: border-box;
-  background-color: Gainsboro; /* https://up.htmlacademy.ru/htmlcss/26/project/sedona#sedona-3-6 */
+  background-color: Gainsboro;
 }
 
 body{
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
   color: black;
   background-color: white;
-  position: relative;
   box-shadow: 0 0 10px rgba(0,0,0,0.75);
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* HEADER */
@@ -42,10 +46,10 @@ nav ul{
 }
 
 nav li{
-  list-style: none;
   width: 140px;
   min-height: 57px;
   padding-top: 18px;
+  list-style: none;
 }
 
 nav li:nth-child(1){
@@ -53,8 +57,8 @@ nav li:nth-child(1){
 }
 
 nav li:nth-child(2){
-  margin-left: 101px;
   margin-right: auto;
+  margin-left: 101px;
 }
 
 nav li:nth-child(3){
@@ -69,15 +73,15 @@ nav li:nth-child(4){
 
 nav a{
   font-size: 14px;
-  color: rgb(0, 0, 0);
   font-weight: bold;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.008em;
 }
 
 nav a:hover,
 nav a:focus{
   color: rgb(129, 179, 210);
-    outline: 0;
+  outline: 0;
 }
 
 nav a:active{
@@ -91,36 +95,37 @@ nav a:active{
 .link-map{
   letter-spacing: 0.04em;
 }
-/* INDEX.htnl */
+
+/* INDEX.html */
 
 .welcome{
   height: 508px;
+  margin-bottom: 60px;
+  padding-top: 76px;
   background-color: rgb(98, 148, 191);
   background-image:  url("../img/intro-mask.svg"), url("../img/welcome-background.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size:100%, 100%;
   background-position: 0 451px, 0 -82px;
   text-align: center;
-  padding-top: 76px;
-  margin-bottom: 60px;
 }
 
 .about h2{
-  text-align: center;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
   margin-bottom: 27px;
   padding-left: 350px;
   padding-right: 350px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  text-align: center;
   letter-spacing: 0.008em;
 }
 
 .about p{
-  text-align: center;
+  margin-bottom: 51px;
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: 51px;
+  text-align: center;
   letter-spacing: 0.008em;
 }
 
@@ -131,32 +136,32 @@ nav a:active{
 }
 
 .advantages h3{
-  font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
-  text-align: center;
   margin-bottom: 24px;
   padding-left: 95px;
   padding-right: 95px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
   letter-spacing: 0.008em;
 }
 
 .advantages p{
-  font-size: 14px;
-  line-height: 21px;
-  text-align: center;
   margin-bottom: 21px;
   padding-left: 20px;
   padding-right: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
   letter-spacing: 0.008em;
 }
 
 .advantage-blue{
   width: 400px;
   min-height: 256px;
-  background-color: rgb(129, 179, 210);
-  color:white;
   padding: 25px;
+  color:white;
+  background-color: rgb(129, 179, 210);
 }
 
 .advantage-picture{
@@ -205,35 +210,36 @@ nav a:active{
 .advantage-grey{
   width: 400px;
   min-height: 256px;
-  background-color: rgb(238, 238, 238);
   padding: 26px;
+  background-color: rgb(238, 238, 238);
 }
 
 .search h2{
-  text-align: center;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: bold;
   margin-bottom: 24px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
 }
 
 .search p{
-  text-align: center;
+  margin-bottom:47px;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom:47px;
+  text-align: center;
 }
 
 .search-button{
   display: block;
   width: 568px;
-  height: 86px;
+  min-height: 86px;
   margin: auto;
+  padding: 10px;
   padding-top: 31px;
   font-size: 21px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
   text-align: center;
+  color: rgb(255, 255, 255);
   background-color: rgb(118, 99, 87);
 }
 
@@ -243,19 +249,37 @@ nav a:active{
 }
 
 .search-button:active{
-  background-color: rgb(80, 62, 51);
   color: rgb(146, 138, 133);
+  background-color: rgb(80, 62, 51);
+}
+
+.hide{
+  display:none;
 }
 
 .search-form{
-/*   display:none; */
   position: absolute;
+  z-index: 1;
   left:50%;
   margin-left: -284px;
   width: 568px;
   min-height: 395px;
+  padding: 55px;
   background-color: white;
-  padding: 55px 55px;;
+  animation-duration: 0.5s;
+  animation-name: fall-down;
+}
+
+@keyframes fall-down {
+  0%{
+    opacity: 0;
+    transform: translateY(-198px) scaleY(0); /* работает в ie11 */
+  /*transform: translateY(calc(-100%/2)) scaleY(0); */ /* не работает в ie11 */
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .search-form form{
@@ -264,34 +288,35 @@ nav a:active{
 }
 
 .search-form label{
-  width: 110px;
   display: block;
+  width: 110px;
   margin-right: auto;
   padding-top: 11px;
   font-size: 14px;
   font-weight: bold;
-/*     letter-spacing: 0.001em; */
+  cursor: pointer;
 }
 
 .search-form button{
   display: block;
   width: 38px;
   height: 38px;
+  padding-top: 3px;
   background-color: rgb(242,242,242);
   border: none;
-  padding-top: 3px;
+  cursor: pointer;
 }
 
 .search-form input{
   display: block;
   width: 308px;
   min-height: 38px;
-  background-color: rgb(242,242,242);
-  border: none;
   margin-bottom: 29px;
+  padding: 3px 12px;
   font-size: 14px;
   font-weight: bold;
-  padding: 3px 12px;;
+  background-color: rgb(242,242,242);
+  border: none;
 }
 
 .search-form input:hover{
@@ -322,13 +347,14 @@ nav a:active{
   display: block;
   width: 458px;
   min-height: 58px;
-  background-color: rgb(129, 179, 210);
-  text-transform: uppercase;
-  color: white;
+  margin-top: 25px;
+  padding: 4px;
+  font: inherit;
   font-size: 21px;
   font-weight: bold;
-  margin-top: 25px;
-  padding-bottom: 4px;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(129, 179, 210);
 }
 
 .search-form .serach-button-main:hover,
@@ -337,8 +363,8 @@ nav a:active{
 }
 
 .search-form .serach-button-main:active{
-  background-color: rgb(84, 150, 189);
   color: rgb(136, 182, 209);
+  background-color: rgb(84, 150, 189);
 }
 
 .search-form button:hover line,
@@ -363,23 +389,30 @@ nav a:active{
   height: 593px;
   background-color: rgb(203,221,169);
   background-image:  url("../img/map.png");
+  overflow: hidden;
+}
+
+.map iframe{
+  margin-top: -200px;
 }
 
 /* HOTELS */
 
 .search-filter form{
-  background-image:  url("../img/filter-background.jpg");
   display: flex;
   min-height: 217px;
   padding: 28px 71px 5px;
+  background-color: rgb(44,62,74);
+  background-image:  url("../img/filter-background.jpg");
+  background-position: 0 -55px;
 }
 
 .search-filter h3{
+  margin: 0;
+  margin-bottom: 27px;
   font-size: 16px;
   font-weight: bold;
   color:white;
-  margin: 0;
-  margin-bottom: 27px;
 }
 
  .search-filter label{
@@ -397,42 +430,44 @@ nav a:active{
 }
 
 .checkbox{
-  margin-bottom: 28px;
   margin-left: 23px;
+  margin-bottom: 28px;
 }
 
- .checkbox input{
-    opacity: 0;
+.checkbox input{
+  opacity: 0;
 }
 
 .checkbox input:focus + label::before {
+  outline: thin dotted;
   outline: rgb(60, 150, 250) auto 5px;
 }
 
 .checkbox label{
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox label::before{
   content: "";
   position: absolute;
+  left:-40px;
+  top:-1px;
   width: 23px;
   height: 23px;
   background: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
-  left:-40px;
-  top:-1px;
 }
 
 .checkbox-input:checked + label::before{
   content: "";
   position: absolute;
+  left:-40px;
+  top:-1px;
   width: 27px;
   height: 23px;
   background: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
-  left:-40px;
-  top:-1px;
 }
 
 .checkbox-input:disabled + label::before{
@@ -454,7 +489,7 @@ nav a:active{
 }
 
 .filter-range h3 {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   letter-spacing: 0.008em;
 }
 
@@ -482,7 +517,7 @@ nav a:active{
   display: inline-block;
   font-size: 14px;
   line-height: 30px;
-  vertical-align: center;
+  vertical-align: top;
   cursor: pointer;
 }
 
@@ -499,8 +534,8 @@ nav a:active{
 
 .price-controls input {
   width: 50px;
-  padding-bottom: 10px; /* для ie11 */
   margin: 0;
+  padding-bottom: 10px; /* для ie11 */
   color: inherit;
   font: inherit;
   background: none;
@@ -551,6 +586,7 @@ nav a:active{
   display: block;
   margin: 0 85px;
   padding: 6px 34px;
+  font: inherit;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -571,9 +607,10 @@ nav a:active{
 
 .found{
   display: flex;
+  flex-wrap: wrap;
   min-height: 87px;
-  border-bottom: 1px solid rgb(229, 229, 229);
   padding: 31px 72px;
+  border-bottom: 1px solid rgb(229, 229, 229);
 }
 
 .found label,
@@ -583,46 +620,23 @@ nav a:active{
   color:black;
 }
 
+.found p{
+  margin: 5px 0 0 48px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 .found ul{
-  padding: 0;
-  margin: 3px 0 0 7px;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin: 3px 0 0 7px;
+  padding: 0;
 }
 
 .found li{
-  list-style: none;
   margin-left: 33px;
-}
-
-.found p{
-  font-size: 12px;
-  line-height: 18px;
-  margin: 5px 0 0 48px;
-}
-
-.found button{
-  margin-left: auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-.found button:last-child{
-  margin-left: 12px;
-  margin-right: 1px;
-}
-
-.active-sort-button polygon{
-  fill: rgb(136, 182, 209);
-}
-
-.found polygon:hover,
-.found polygon:focus{
-  fill: rgb(35, 31, 32);
-}
-
-.found polygon:active{
-  fill: rgb(129, 179, 210);
+  list-style: none;
 }
 
 .found a{
@@ -647,6 +661,32 @@ nav a:active{
   border-bottom:none;
 }
 
+ .found .sort-arrow{
+  margin-left: auto;
+  padding-top: 5px;
+  border: none;
+}
+
+.found .sort-arrow:last-child{
+  margin-left: 12px;
+  margin-right: 1px;
+}
+
+.sort-arrow:hover polygon,
+.sort-arrow:focus polygon{
+  fill: rgb(35, 31, 32);
+}
+
+ .sort-arrow:active polygon{
+  fill: rgb(129, 179, 210);
+}
+
+.active-sort-button polygon{
+  fill: rgb(136, 182, 209);
+}
+
+/* результаты поиска */
+
 .hotel-name{
   font-size: 21px;
   font-weight: bold;
@@ -662,39 +702,38 @@ nav a:active{
   color: rgb(202, 202, 202);
 }
 
-/* результаты поиска */
-
 .search-result p{
   font-size: 14px;
   line-height: 21px;
 }
 .search-result ul{
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
 }
 
 .search-result li{
-  list-style: none;
   display: flex;
-  border-bottom: 1px solid rgb(229, 229, 229);
-  padding-bottom: 30px;
   min-height: 151px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  list-style: none;
 }
 
 .hotel-result-picture{
+  width: 135px;
+  height: 90px;
   margin-top: 30px;
   margin-left: 72px;
-  height: 90px;
 }
 
 .hotel-result-name{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 258px;
   min-height: 90px;
   margin-top: 25px;
   margin-left: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .hotel-result-name h3{
@@ -716,19 +755,19 @@ nav a:active{
 
 .hotel-result-raiting{
   margin-left: auto;
-  margin-right: 72px;
+  margin-right: 71px;
 }
 
 .hotel-button{
   display: block;
-  height: 27px;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding-top: 3px;
+  min-height: 27px;
   margin-top: 3px;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 .details{
@@ -742,8 +781,8 @@ nav a:active{
 }
 
 .details:active{
-  background-color: rgb(84, 150, 189);
   color: rgb(136, 182, 209);
+  background-color: rgb(84, 150, 189);
 }
 
 .book{
@@ -757,36 +796,40 @@ nav a:active{
 }
 
 .book:active{
-  background-color: rgb(80, 62, 51);
   color: rgb(146, 138, 133);
+  background-color: rgb(80, 62, 51);
 }
 
 .stars{
   width: 110px;
   height: 17px;
-  text-align: right;
   margin-top: 29px;
-  margin-bottom: 46px;
+  margin-bottom: 47px;
+  margin-left: auto;
   font-size: 0;
+  text-align: right;
 }
 
 .stars span{
   display: inline-block;
-  background-image:  url("../img/star.svg");
-  font-size: 14px;
-  color: transparent;
   width: 18px;
   height: 17px;
-  margin-left: 5px;
+  margin-left: 6px;
+  font-size: 14px;
+  color: transparent;
+  vertical-align: top;
+  background-image:  url("../img/star.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 
 .raiting{
   width: 110px;
-  background-color: rgb(242, 242, 242);
   padding: 3px 2px 3px 16px;
   margin: 0;
-  margin-right: 2px;
+  margin-left: auto;
+  margin-right: 3px;
+  background-color: rgb(242, 242, 242);
 }
 
 /* FOOTER */
@@ -795,32 +838,32 @@ nav a:active{
   display: flex;
   min-height: 120px;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 1200px;
 }
 
 .main-page{
-/*    position: absolute;
-     bottom: 0px; */
-  margin-top: -120px;
-  z-index: 1;
+  position: absolute;
+  width: 1200px;
+  bottom: 0px;
+/*margin-top: -120px;
+  z-index: 1; */
 }
 
 .visitsedona{
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: bold;
-  margin-left: 132px;
   margin-top: 46px;
+  margin-left: 132px;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
 }
 
 .footer ul{
-  padding:0;
-  width: 150px;
   display: flex;
-  justify-content:space-between;
   flex-wrap: wrap;
+  justify-content:space-between;
+  width: 150px;
   margin-top: 36px;
   margin-left: 256px;
+  padding:0;
 }
 
 .copyright{
@@ -831,10 +874,10 @@ nav a:active{
 }
 
 .copyright p{
+  margin-top: 15px;
+  margin-right: 8px;
   font-size: 14px;
   line-height: 26px;
-  margin-right: 8px;
-  margin-top: 15px;
 }
 
 .copyright svg{
@@ -842,8 +885,8 @@ nav a:active{
 }
 
 .footer li{
-  list-style: none;
   margin-bottom: 5px;
+  list-style: none;
 }
 
 .social-button{
@@ -867,7 +910,6 @@ nav a:active{
  fill: rgb(136, 182, 209);
 }
 
-
 .twitter{
   padding-top: 17px;
 }
@@ -889,6 +931,26 @@ nav a:active{
  fill: rgb(189, 187, 188);
 }
 
+.sort-arrow,   /* fix for ie11 */
+.academy-logo,
+.social-button{
+  display: block;
+  position: relative;
+}
+
+.sort-arrow:before,  /* fix for ie11 */
+.academy-logo:before,
+.social-button:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
 .text-fix{
   letter-spacing: 0.02em;
 }
@@ -900,8 +962,8 @@ nav a:active{
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+  border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
