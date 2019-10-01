@@ -355,6 +355,7 @@ nav a:active{
   color: white;
   text-transform: uppercase;
   background-color: rgb(129, 179, 210);
+  border: none;
 }
 
 .search-form .serach-button-main:hover,
