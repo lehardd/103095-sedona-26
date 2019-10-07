@@ -420,6 +420,7 @@ nav a:active{
 
 .map iframe{
   margin-top: -200px;
+  border: 0;
 }
 
 /* HOTELS */
