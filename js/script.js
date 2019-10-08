@@ -8,7 +8,6 @@ var children = popup.querySelector("[name=children]");
 
 
 link.addEventListener("click", function (evt) {
-  evt.preventDefault();
   popup.classList.toggle("hide");
   popup.classList.remove("modal-error");
 });
