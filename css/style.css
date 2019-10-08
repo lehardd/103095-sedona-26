@@ -35,56 +35,56 @@ img {
   margin-left: -69px;
 }
 
-header nav{
+.nav{
   margin-top: -71px;
 }
 
-nav ul{
+.nav ul{
   display: flex;
   padding: 0;
   margin: 0;
 }
 
-nav li{
+.nav li{
   width: 140px;
   min-height: 57px;
   padding-top: 18px;
   list-style: none;
 }
 
-nav li:nth-child(1){
+.nav li:nth-child(1){
   margin-left: 71px;
 }
 
-nav li:nth-child(2){
+.nav li:nth-child(2){
   margin-right: auto;
   margin-left: 101px;
 }
 
-nav li:nth-child(3){
+.nav li:nth-child(3){
   margin-right: 101px;
   text-align: right;
 }
 
-nav li:nth-child(4){
+.nav li:nth-child(4){
   margin-right: 71px;
   text-align: right;
 }
 
-nav a{
+.nav a{
   font-size: 14px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   letter-spacing: 0.008em;
 }
 
-nav a:hover,
-nav a:focus{
+.nav a:hover,
+.nav a:focus{
   color: rgb(129, 179, 210);
   outline: 0;
 }
 
-nav a:active{
+.nav a:active{
   color: rgba(0, 0, 0, 0.302);
 }
 
@@ -127,6 +127,7 @@ nav a:active{
   line-height: 26px;
   text-align: center;
   letter-spacing: 0.008em;
+  color:rgb(51, 51, 51);
 }
 
 .advantages{
@@ -154,6 +155,7 @@ nav a:active{
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.008em;
+  color:rgb(51, 51, 51);
 }
 
 .advantage-blue{
@@ -162,6 +164,10 @@ nav a:active{
   padding: 25px;
   color:white;
   background-color: rgb(129, 179, 210);
+}
+
+.advantage-blue p{
+  color:white;
 }
 
 .advantage-picture{
@@ -227,6 +233,7 @@ nav a:active{
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  color:rgb(51, 51, 51);
 }
 
 .search-button{
@@ -235,12 +242,14 @@ nav a:active{
   min-height: 86px;
   margin: auto;
   padding: 10px;
-  padding-top: 31px;
   font-size: 21px;
   font-weight: bold;
   text-align: center;
+  text-transform: inherit;
+  line-height: 66px;
   color: rgb(255, 255, 255);
   background-color: rgb(118, 99, 87);
+  border: none;
 }
 
 .search-button:hover,
@@ -342,6 +351,7 @@ nav a:active{
   font-weight: bold;
   background-color: rgb(242,242,242);
   border: none;
+  text-align: left;
 }
 
 .search-form input:hover{
@@ -352,6 +362,12 @@ nav a:active{
   background-color: rgb(255,255,255);
   border: 2px solid rgb(229,229,229);
   outline: 0;
+
+}
+
+.search-form .check-in-date:focus,
+.search-form .check-out-date:focus{
+  padding-left: 10px;
 }
 
 .search-form .check-out-date{
@@ -393,21 +409,21 @@ nav a:active{
   background-color: rgb(84, 150, 189);
 }
 
-.search-form button:hover line,
-.search-form button:focus line{
+.small-button:hover line,
+.small-button:focus line{
   stroke:black;
 }
 
-.search-form button:hover path,
-.search-form button:focus path{
+.small-button:hover path,
+.small-button:focus path{
   fill:black;
 }
 
-.search-form button:active line{
+.small-button:active line{
   stroke:rgb(129, 179, 210);
 }
 
-.search-form button:active path{
+.small-button:active path{
   fill:rgb(129, 179, 210);
 }
 
@@ -774,6 +790,7 @@ nav a:active{
   min-height: 40px;
   margin: 0;
   padding-top: 8px;
+  color: rgb(51, 51, 51);
 }
 
 .hotel-result-name p:nth-child(3){
@@ -856,6 +873,7 @@ nav a:active{
   margin: 0;
   margin-left: auto;
   margin-right: 3px;
+  color: rgb(102, 102, 102);;
   background-color: rgb(242, 242, 242);
 }
 
